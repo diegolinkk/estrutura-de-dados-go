@@ -1,4 +1,4 @@
-package operacoes
+package arrays
 
 //Recebe o array e um valor para busca e retorna o indice daquele elemento.
 //Caso não localizado, retorna -1
