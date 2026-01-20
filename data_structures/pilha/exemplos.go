@@ -1,9 +1,12 @@
 package pilha
 
-import "fmt"
+import (
+	"fmt"
+	"strconv"
+)
 
 func Exemplos_Pilha() {
-	var animais Pilha
+	var animais Pilha[string]
 
 	//adicionando itens
 	animais.Push("Cachorro")
@@ -37,4 +40,23 @@ func Exemplos_Pilha() {
 
 	animais.Push("Orangotango")
 	fmt.Println(animais.Peek()) //Orangotango
+}
+
+func CalculadoraBinario(numero int) string {
+	if numero == 0 {
+		return "0"
+	}
+
+	resultado := ""
+	var p Pilha[int]
+	for numero > 0 {
+		p.Push(numero % 2)
+		numero = numero / 2
+	}
+	for p.Size() > 0 {
+		retorno := p.Pop()
+		resultado += strconv.Itoa(retorno)
+
+	}
+	return resultado
 }
