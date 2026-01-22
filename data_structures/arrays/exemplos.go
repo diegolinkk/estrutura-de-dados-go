@@ -4,7 +4,7 @@ import (
 	"fmt"
 )
 
-func Exemplos_Arrays() {
+func ExemplosArrays() {
 	var numeros [10]int
 	for i := 0; i < len(numeros); i++ {
 		numeros[i] = i + 1

@@ -5,7 +5,7 @@ import (
 	"strconv"
 )
 
-func Exemplos_Pilha() {
+func ExemplosPilha() {
 	var animais Pilha[string]
 
 	//adicionando itens
